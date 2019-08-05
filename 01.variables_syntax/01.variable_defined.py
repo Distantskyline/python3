@@ -28,15 +28,15 @@
 
 
 #比较两数的大小
-# a = int(input('请输入a:'))
-# b = int(input('请输入b:'))
-# if a == b:
-#      print("a等于b")
-#
-# elif a <= b:
-#     print("a小于b")
-# elif a >= b:
-#     print("a大于b")
+a = int(input('请输入a:'))
+b = int(input('请输入b:'))
+if a == b:
+     print("a等于b")
+
+elif a <= b:
+    print("a小于b")
+elif a >= b:
+    print("a大于b")
 
 
 
