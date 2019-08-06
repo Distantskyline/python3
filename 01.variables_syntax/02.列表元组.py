@@ -52,8 +52,6 @@
 #     if i != len(list01):
 #         str02 += (str01 + ' ')
 # print(str02)
-
-
 # i = 0
 # str02 = ''
 # while i < len(list01):
@@ -64,7 +62,7 @@
 #         print(str02)
 # str03=str02.rstrip()
 # print(str03)
-
+#
 
 
 ######  敏感字符替换，如果存在敏感词混，直接替换为*
@@ -95,18 +93,13 @@
 ######  转换列表中的元组为普通形式
 # list01 = ["string", "tuple", "list", (1, 2, 3, 4, 5), [6, 7]]
 # tuple01 = list01[3]
-# i = 0
 # list02 = list01[4]
-# list01.pop(3)
-# list01.pop(3)
+# list01.pop(3) and list01.pop(3)
+# i = 0
 # while i < len(tuple01):
 #     n=tuple01[i]
-#     n = i
 #     i += 1
 #     list01.append(n)
-#     if i == len(tuple01):
-#         # print(list01)
-#         pass
 # u = 0
 # while u < len(list02):
 #     m = list02[u]
@@ -114,11 +107,11 @@
 #     u += 1
 #     if u == len(list02):
 #         print(list01)
-#
+
 
 
 ######  for 循环数字排序
-list01 = [23,12,15,11,29,24,57,21,80,99,45]
+# list01 = [23,12,15,11,29,24,57,21,80,99,45]
 # for i in range(len(list01)):
 #     for j in range(len(list01) -i -1):
 #         if list01[j] > list01 [j+1]:
@@ -130,3 +123,10 @@ list01 = [23,12,15,11,29,24,57,21,80,99,45]
 #         if list01[j] > list01[j+1]:
 #             list01[j],list01[j+1] = list01[j+1],list01[j]
 # print(list01)
+
+# list01 = (1,2,4,5,6)
+# a = list01[:]2
+#
+# print(a)
+# list = []
+# list01.extend()
