@@ -31,8 +31,13 @@ tuple01 = (2, 4.445, True, False, "String Type")
 # print(list01.count(1))
 # print(tuple01.count(1))
 
-a = list01.index(False)
-print(a)
+# a = list01.index(False)
+# print(a)
+#
+# print(tuple01.index(True))
 
-print(tuple01.index(True))
+# list01 = [23,12,321,233,34,1,43,45]
+# list01.sort()
+# print(list01)
+
 
