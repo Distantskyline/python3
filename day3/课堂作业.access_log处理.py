@@ -33,34 +33,51 @@
 #     print(dictA, type(dictA))
 
 import json
-with open(file='./txtFile/access_log',mode='r',encoding='utf8')as file:
-    hang = file.readlines()
-    list01 = []
-    dict01 = {}
-    for n in hang:
-        hang_ip=n.split('- -')[0].rstrip()
-        # print(hang_ip)
-        list01.append(hang_ip)
-    # print(list01)
-    for x in list01:
-        y = list01.count(x)
-        # print(x,y)
-        dict01[x] = y
-    # print(dict01)
-# print(dict01)
-dict02 = {}
-list02 = []
-for i in dict01.items():
-    list02.append(i[1])
-list02.sort()
-list02.reverse()
-# print(list02)
-for q in list02:
-    for p in dict01.items():
-        if q == p[1]:
-            dict02[p[0]] = q
-# print(dict02)
-answer = (list(dict02.items())[:10])
-print(answer)
-with open(file='./txtFile/前十个IP.txt',mode='w',encoding='utf8')as file1:
-    file1.write(json.dumps(answer\n,ensure_ascii=False))
+# with open(file='./txtFile/access_log',mode='r',encoding='utf8')as file:
+#     hang = file.readlines()
+#     list01 = []
+#     dict01 = {}
+#     for n in hang:
+#         hang_ip=n.split('- -')[0].rstrip()
+#         # print(hang_ip)
+#         list01.append(hang_ip)
+#     # print(list01)
+#     for x in list01:
+#         y = list01.count(x)
+#         # print(x,y)
+#         dict01[x] = y
+#     # print(dict01)
+# # print(dict01)
+# dict02 = {}
+# list02 = []
+# for i in dict01.items():
+#     list02.append(i[1])
+# list02.sort()
+# list02.reverse()
+# # print(list02)
+# for q in list02:
+#     for p in dict01.items():
+#         if q == p[1]:
+#             dict02[p[0]] = q
+# # print(dict02)
+# answer = (list(dict02.items())[:10])
+# print(answer)
+# with open(file='./txtFile/前十个IP.txt',mode='w',encoding='utf8')as file1:
+#     file1.write(json.dumps(answer\n,ensure_ascii=False))
+
+
+
+
+#状态码处理
+
+# 170.83.202.0 - - [30/Jun/2019:03:19:51 +0800] "GET / HTTP/1.1" 200 152 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7" "-"
+# 167.71.176.25 - - [30/Jun/2019:04:22:30 +0800] "HEAD / HTTP/1.1" 200 0 "https://www.netcraft.com/survey/" "Mozilla/4.0 (compatible; Netcraft Web Server Survey)" "-"
+
+with open(file='./txtFile/access_log',mode='r',encoding='utf8')as file2:
+    hang01 = file2.readlines()
+    list03 = []
+    dict03 = {}
+    for nn in hang01:
+        stats = nn.split('1.1"')[1]
+        # stats_true = stats.split(' ')[0]
+        print(stats)
