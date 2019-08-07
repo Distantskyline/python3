@@ -13,8 +13,8 @@
 # x = list01.__sizeof__()
 # print(x)
 
-list01 = [1, 3.14, True, False, "String Type"]
-tuple01 = (2, 4.445, True, False, "String Type")
+# list01 = [1, 3.14, True, False, "String Type"]
+# tuple01 = (2, 4.445, True, False, "String Type")
 #
 # x = len(tuple01)
 # print('tuple01的长度 =', x)
