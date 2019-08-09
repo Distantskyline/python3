@@ -71,5 +71,5 @@ with open(file='./txtFile/前十个IP.txt',mode='w',encoding='utf8')as file1:
 #     dict03 = {}
 #     for nn in hang01:
 #         stats = nn.split('1.1"')[1]
-#         # stats_true = stats.split(' ')[0]
+#         stats_true = stats.split(' ')[0]
 #         print(stats)

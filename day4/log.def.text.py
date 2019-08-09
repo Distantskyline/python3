@@ -26,7 +26,8 @@ def PUV (path):
         ips = (sorted(ips.items(), key=lambda x: x[1], reverse=True))
 
         print('UV量:',(len(list(ips))))
-    print(dict((ips)[0:10]))
+        ips = dict((ips)[0:10])
+    print((ips))
 PUV('../day3/txtFile/access_log')
 
 
@@ -34,23 +35,23 @@ PUV('../day3/txtFile/access_log')
 # 6.请统计access_log中所有的状态码(200, 404, 502, 503)各自出现的数量,
 # 并把统计好的数据json格式化,存储到文件中
 
-# def stats(path):
-#     stats = {}
-#     stats1 = {}
-#     with open(file=path,mode='r',encoding='utf8')as file:
-#         for line in file.readlines():
-#            if line.split()[8] not in stats.keys():
-#                stats.setdefault(line.split()[8],1)
-#            else:
-#                stats[line.split()[8]] +=1
-#         stats = dict(sorted(stats.items(),key=lambda x: x[1],reverse=True))
-#         list01 = ['200','404','502','503']
-#         for i in stats.keys():
-#             if i in list01:
-#                 stats1[i] = stats[i]
-#         return stats1
-#         # for i in stats.items():
-#         #     if i[0] in list01:
-#         #         stats1[i[0]] = stats[i[0]]
-#         # return stats1
-# print(stats('../day3/txtFile/access_log'))
+def stats(path):
+    stats = {}
+    stats1 = {}
+    with open(file=path,mode='r',encoding='utf8')as file:
+        for line in file.readlines():
+           if line.split()[8] not in stats.keys():
+               stats.setdefault(line.split()[8],1)
+           else:
+               stats[line.split()[8]] +=1
+        stats = dict(sorted(stats.items(),key=lambda x: x[1],reverse=True))
+        list01 = ['200','404','502','503']
+        for i in stats.keys():
+            if i in list01:
+                stats1[i] = stats[i]
+        return stats1
+        # for i in stats.items():
+        #     if i[0] in list01:
+        #         stats1[i[0]] = stats[i[0]]
+        # return stats1
+print(stats('../day3/txtFile/access_log'))
