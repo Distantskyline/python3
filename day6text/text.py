@@ -48,26 +48,26 @@ puip('../day3/txtFile/access_log')
 # |   统计 txtFile中的ip 的数量以及访问次数  |
 # |                                     |
 # +-------------------------------------|
-# def PUV (path):
-#     with open(file=path, mode='r', encoding='utf8') as log:
-#         a = log.readlines()
-#         print('PV量:',len(a))
-#
-#     ips = {}
-#     with open(file=path, mode='r', encoding='utf8') as log:
-#         for lines in log.readlines():
-#             if lines.split()[0] not in ips.keys():
-#                 ips.setdefault(lines.split()[0], 1)
-#             else:
-#                 ips[lines.split()[0]] += 1
-#
-#         ips = (sorted(ips.items(), key=lambda x: x[1], reverse=True))
-#
-#         print('UV量:',(len(list(ips))))
-#         ips = dict((ips)[0:10])
-#     print((ips))
-# PUV('../day3/txtFile/access_log')
-#
+def PUV (path):
+    with open(file=path, mode='r', encoding='utf8') as log:
+        a = log.readlines()
+        print('PV量:',len(a))
+
+    ips = {}
+    with open(file=path, mode='r', encoding='utf8') as log:
+        for lines in log.readlines():
+            if lines.split()[0] not in ips.keys():
+                ips.setdefault(lines.split()[0], 1)
+            else:
+                ips[lines.split()[0]] += 1
+
+        ips = (sorted(ips.items(), key=lambda x: x[1], reverse=True))
+
+        print('UV量:',(len(list(ips))))
+        ips = dict((ips)[0:10])
+    print((ips))
+PUV('../day3/txtFile/access_log')
+
 #
 # ####计算
 # #
