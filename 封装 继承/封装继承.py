@@ -131,25 +131,30 @@ class Webopera:
     def logout(self):
         print('{}/{} logout page'.format(self.url, self.token))
 
+    def __str__(self):
+        return 'str method execute successfully'
     @staticmethod
     def welcome(content):
         print('''Welcome to Webopera
         {}'''.format(content))
 
+x = Webopera('baidu.com','hh')
+print(x)
+
 
 # hasattr()查询对象中的方法,返回bool值
-web = Webopera('www.qfcloud.com', 'login')
-result = hasattr(web, 'logout')    ##检查实例中有没有匹配的方法
-print(result)        ##布尔值输出
-
+# web = Webopera('www.qfcloud.com', 'login')
+# result = hasattr(web, 'welcome')    ##检查实例中有没有匹配的方法
+# print(result)        ##布尔值输出
+#
 # getattr()获取对象中的方法,利用字符串获取其中的方法,用变量接收
-variable = getattr(web, 'welcome')			##获得值   实例名，方法名
-variable('execute successfully')
+# variable = getattr(web, 'welcome')			##获得值   实例名，方法名
+# variable('execute successfully')
 #
 # setattr()设置对象中的属性
-setattr(web, 'content', 'opera setattr method successfully')  ##实例名，属性名，属性值
-print(web.content)
-
+# setattr(web, 'content', 'opera setattr method successfully')  ##实例名，属性名，属性值
+# print(web.content)
+# #
 # # delattr()删除对象中的属性
 # delattr(web, 'content')
 # print(web.content)
