@@ -116,30 +116,30 @@
 # zhibox.MJ = 1,2,3
 # print(zhibox.MJ)
 
-
-class Webopera:
-
-    VERSION = '1.0'
-
-    def __init__(self, url, token):
-        self.url = url   #url 统一资源定位符 （唯一性）
-        self.token = token #身法验证用，必须要有的
-
-    def login(self):
-        print('{}/{} login page'.format(self.url, self.token))
-
-    def logout(self):
-        print('{}/{} logout page'.format(self.url, self.token))
-
-    def __str__(self):
-        return 'str method execute successfully'
-    @staticmethod
-    def welcome(content):
-        print('''Welcome to Webopera
-        {}'''.format(content))
-
-x = Webopera('baidu.com','hh')
-print(x)
+#
+# class Webopera:
+#
+#     VERSION = '1.0'
+#
+#     def __init__(self, url, token):
+#         self.url = url   #url 统一资源定位符 （唯一性）
+#         self.token = token #身法验证用，必须要有的
+#
+#     def login(self):
+#         print('{}/{} login page'.format(self.url, self.token))
+#
+#     def logout(self):
+#         print('{}/{} logout page'.format(self.url, self.token))
+#
+#     def __str__(self):
+#         return 'str method execute successfully'
+#     @staticmethod
+#     def welcome(content):
+#         print('''Welcome to Webopera
+#         {}'''.format(content))
+#
+# x = Webopera('baidu.com','hh')
+# print(x)
 
 
 # hasattr()查询对象中的方法,返回bool值
