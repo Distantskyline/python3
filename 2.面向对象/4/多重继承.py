@@ -130,54 +130,70 @@
 
 
 
-##两个类攻击
-import random
-class wanjia1:
-    buff = random.randint(0,10)
-    def __init__(self,x,gjl,l,xh):
-        self.x = x
-        self.gjl = gjl
-        self.l = l
-        self.xh = xh
-    def gongji(self,instance):
-        instance.x -= self.gjl + self.buff
-        self.l -= self.xh
-    def getinfo(self):
-        info = {
-            'xie': self.x,
-            'lan': self.l
-        }
-        return info
+# ##两个类攻击
+# import random
+# class wanjia1:
+#     buff = random.randint(0,10)
+#     def __init__(self,x,gjl,l,xh):
+#         self.x = x
+#         self.gjl = gjl
+#         self.l = l
+#         self.xh = xh
+#     def gongji(self,instance):
+#         instance.x -= self.gjl + self.buff
+#         self.l -= self.xh
+#     def getinfo(self):
+#         info = {
+#             'xie': self.x,
+#             'lan': self.l
+#         }
+#         return info
+#
+#
+# class wanjia2:
+#     buff = random.randint(0, 10)
+#     def __init__(self, x, gjl, l, xh):
+#         self.x = x
+#         self.gjl = gjl
+#         self.l = l
+#         self.xh = xh
+#
+#     def gongji(self,instance):
+#         instance.x -= self.gjl + self.buff
+#         self.l = self.xh
+#
+#     def getinfo(self):
+#         info = {
+#             'xie': self.x,
+#             'lan': self.l
+#         }
+#         return info
+# wj1 = wanjia1( x = 100 , gjl = 100 , l = 100 , xh = 30 )
+#
+# wj2 = wanjia2( x = 200 , gjl = 30 , l = 100 , xh = 40 )
+#
+# for x in range(40):
+#     wj1.gongji(wj2)
+#     if random.randint(0,9) %2 == 0 :
+#         wj2.gongji(wj1)
+# else:
+#     if wj1.x <= 0:
+#         print('wj1死了')
+#     elif wj2.x <= 0:
+#         print('wj2死了')
 
 
-class wanjia2:
-    buff = random.randint(0, 10)
-    def __init__(self, x, gjl, l, xh):
-        self.x = x
-        self.gjl = gjl
-        self.l = l
-        self.xh = xh
+def waibu(func):
+    def neibu():
+        print('zhuangshiqi')
+        func()
+        print('hhh')
+    return neibu
 
-    def gongji(self,instance):
-        instance.x -= self.gjl + self.buff
-        self.l = self.xh
+@waibu
+def test():
+    print('123')
 
-    def getinfo(self):
-        info = {
-            'xie': self.x,
-            'lan': self.l
-        }
-        return info
-wj1 = wanjia1( x = 100 , gjl = 100 , l = 100 , xh = 30 )
 
-wj2 = wanjia2( x = 200 , gjl = 30 , l = 100 , xh = 40 )
-
-for x in range(40):
-    wj1.gongji(wj2)
-    if random.randint(0,9) %2 == 0 :
-        wj2.gongji(wj1)
-else:
-    if wj1.x <= 0:
-        print('wj1死了')
-    elif wj2.x <= 0:
-        print('wj2死了')
+# zsq = waibu(test)
+test()

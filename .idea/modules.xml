@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../gpcloud/.idea/gpcloud.iml" filepath="$PROJECT_DIR$/../gpcloud/.idea/gpcloud.iml" />
+      <module fileurl="file://$USER_HOME$/logAnalysis/.idea/logAnalysis.iml" filepath="$USER_HOME$/logAnalysis/.idea/logAnalysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pycharm学习.iml" filepath="$PROJECT_DIR$/.idea/pycharm学习.iml" />
     </modules>
   </component>
