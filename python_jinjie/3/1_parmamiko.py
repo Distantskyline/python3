@@ -56,14 +56,14 @@ transport.close()
 
 
 ####                        使用通道的sftp服务下载上传文件
-# import paramiko
-# #  私钥的位置
-# private = paramiko.RSAKey.from_private_key_file(r'C:\Users\Administrator\.ssh\id_rsa')
-# transport = paramiko.Transport(('192.168.52.135',22))  #  链接的地址和端口
-# transport.connect(username='root', pkey=private)       #  链接的用户名和私钥
-# sftp = paramiko.SFTPClient.from_transport(transport)   #  链接的用户名和私钥
-#
-# sftp.put(r'本地路径', '远程路径加名字') #上传
-# sftp.get('远程文件名字', r'本地路径')#下载
-# #关闭通道"
-# transport.close()
+import paramiko
+#  私钥的位置
+private = paramiko.RSAKey.from_private_key_file(r'C:\Users\Administrator\.ssh\id_rsa')
+transport = paramiko.Transport(('192.168.52.135',22))  #  链接的地址和端口
+transport.connect(username='root', pkey=private)       #  链接的用户名和私钥
+sftp = paramiko.SFTPClient.from_transport(transport)   #  链接的用户名和私钥
+
+sftp.put(r'本地路径', '远程路径加名字') #上传
+sftp.get('远程文件名字', r'本地路径')#下载
+#关闭通道"
+transport.close()
