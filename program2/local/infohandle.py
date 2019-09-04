@@ -78,7 +78,7 @@ def dingding(logpath):
     data = {
         "msgtype": "text",
         "text": {
-            "content": "ipstop1-{}\nipstop2-{}\nipstop3-{}\nstat-{}\npv: {}\nuv: {}".format(ips1,ips2,ips3,code,pv,uv)
+            "content": "iptop1-{}\niptop2-{}\niptop3-{}\nstat-{}\npv: {}\nuv: {}".format(ips1,ips2,ips3,code,pv,uv)
         },
         'at': {
             'atMobiles': [
