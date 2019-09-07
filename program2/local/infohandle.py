@@ -6,6 +6,15 @@ import time
 import json
 import requests
 
+
+# getlog('./log/access.log')
+# log('./log/loginfo.log','./logging.conf')
+# mysql('./log/loginfo.log')
+# dingding('./log/loginfo.log')
+# code = serverinfo.dingding('./log/loginfo.log')
+# print(code)
+
+
 # 获取远程 主机log信息
 def getlog(logpath):
     shouji.shouji(logpath)
@@ -91,11 +100,15 @@ def dingding(logpath):
     requests.post(url=api, data=sendData, headers=header)
 
 
-
-# getlog('./log/access.log')
-# log('./log/loginfo.log','./logging.conf')
-# mysql('./log/loginfo.log')
-# dingding('./log/loginfo.log')
-
-# code = serverinfo.dingding('./log/loginfo.log')
-# print(code)
+token = ''
+api = ''
+header = {'Connect-Type': 'application/json'}
+data = {
+    "msgtype": "test",
+    "test": {
+        "content": "          "
+    },
+    'isAtAll': False
+}
+sendData = json.dumps(data).encode('utf-8')
+requests.post(url=api,data=sendData,header=header)

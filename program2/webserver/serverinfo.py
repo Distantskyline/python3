@@ -15,9 +15,16 @@ def puv(logpath):
         # print(pv,uv)
     return pv,uv
 # puv('../local/log/loginfo.log')
-
-
-
+# ips = {}
+# with open(file='../local/log/loginfo.log',mode='r',encoding='utf8')as file:
+#     for lines in file:
+#         x = lines.split(' ')[0]
+#         if x not in ips:
+#             ips.setdefault(x,1)
+#         else:
+#             ips[x] += 1
+#     ips = sorted(ips.items(),key=lambda x: x[1],reverse=True)[0:5]
+# print(ips)
 def ips(logpath):
     ips = {}
     with open(file=logpath,mode='r',encoding='utf8')as log:

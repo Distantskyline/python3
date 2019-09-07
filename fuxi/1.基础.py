@@ -152,8 +152,18 @@ import re
 # x.stdout.read()
 # print(x)
 
-import redis
-pool = redis.ConnectionPool(host = '192.168.52.134',port = 6379,db=0)
-client = redis.Redis(connection_pool=pool)
+# import redis
+# pool = redis.ConnectionPool(host = '192.168.52.134',port = 6379,db=0)
+# client = redis.Redis(connection_pool=pool)
 
 
+
+##
+class Box:
+    def __init__(self,x,y,z):
+        self.x = 1
+        self.y = 2
+        self.z = 3
+
+abox=Box(4,5,6)
+print(abox.y)

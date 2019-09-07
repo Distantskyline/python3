@@ -37,52 +37,53 @@
 
 ##### __new__
 
-# class Document:
-#     def __new__(cls,*args,**kwargs):
-#         # print('new has been used')
-#         if not hasattr(cls,'instance'):
-#             cls.instance = super().__new__(cls)
-#         return cls.instance
-#
-#     def __init__(self,path):
-#         print('init has been used')
-#         self.path = path
-#
-#     def write(self,content):
-#         with open(self.path,'w',encoding='utf8')as file:
-#             file.writelines(content)
-#
-# cfile = Document('file.txt')
-# cfile.write('''
-#     this is my first line.\n
-#     this is second line.\n
-#     this is third line.''')
-#
-# file01 = Document('file01.txt')
-# file02 = Document('file02.txt')
-#
-# print(id(file01))
-# print(id(file02))
+class Document:
+    def __new__(cls,*args,**kwargs):
+        # print('new has been used')
+        if not hasattr(cls,'instance'):
+            cls.instance = super().__new__(cls)
+        return cls.instance
+
+    def __init__(self,path):
+        print('init has been used')
+        self.path = path
+
+    def write(self,content):
+        with open(self.path,'w',encoding='utf8')as file:
+            file.writelines(content)
+
+cfile = Document('file.txt')
+cfile.write('''
+    this is my first line.\n
+    this is second line.\n
+    this is third line.''')
+
+file01 = Document('file01.txt')
+file02 = Document('file02.txt')
+
+print(id(file01))
+print(id(file02))
 
 
 
 #### __call__
 
-# class Document:
-#     def __init__(self,path):
-#         self.path = path
-#
-#     def __call__(self, *args, **kwargs):
-#         print('call method execute successfully')
-#
-#     def println(self):
-#         print('println method: {}'.format(self.path))
-#
-# # book = Document('file.txt')
-# # book.println()
-#
+class Document:
+    def __init__(self,path):
+        self.path = path
+
+    def __call__(self, *args, **kwargs):
+        print('call method execute successfully')
+
+    def println(self):
+        print('println method: {}'.format(self.path))
+
 # book = Document('file.txt')
 # book.println()
+
+book = Document('file.txt')
+book.println()
+book()
 
 
 # class Document:

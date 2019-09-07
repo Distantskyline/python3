@@ -46,3 +46,15 @@ client._transport = transport
 stdin , stdout, stderr = client.exec_command('ls')
 print(stdout.read().decode('utf-8'))
 transport.close()
+
+## 传输文件，目标地址要 对应起名  命名
+import paramiko
+key = paramiko.RSAKey.from_private_key_file('')
+transport = paramiko.Transport('',22)
+transport.connect(username=' ',pkey= )
+sftp = paramiko.SFTPClient.from_transport(transport)
+sftp.put('','')
+sftp.get('','')
+transport.close()
+
+

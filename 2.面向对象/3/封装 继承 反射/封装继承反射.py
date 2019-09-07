@@ -49,73 +49,75 @@
 #             return file.read()
 
 
-# #声明父类
-# class Box:
-#     def __init__(self,l,w,h):
-#         self.l = l
-#         self.w = w
-#         self.__h = h
-#
-#     def getAera(self):
-#         mj1 = self.l * self.w
-#         mj2 = self.w * self.__h
-#         mj3 = self.l * self.__h
-#         mj = (mj1 + mj2 + mj3) * 2
-#         return mj
-#
-#     def gettiji(self):
-#         tj = self.__h * self.w * self.l
-#         return tj
-#
-# class zhibox(Box):
-#     def __init__(self,l,w,h,ys):
-#         super(zhibox,self).__init__(l,w,h)
-#         self.ys = ys
-#
-#     def gettj(self):
-#         tj,ys = self._h * self.l * self.w , self.ys
-#         return tj ,ys
-#
-#
-# zbox = Box(1,2,3)
-# print(zbox.getAera())
-# zbox1 = zhibox(1,4,2,'yellow')
-# print(zbox1.)
+#声明父类
+class Box:
+    def __init__(self,l,w,h):
+        self.l = l
+        self.w = w
+        self.__h = h
+
+    def getAera(self):
+        mj1 = self.l * self.w
+        mj2 = self.w * self.__h
+        mj3 = self.l * self.__h
+        mj = (mj1 + mj2 + mj3) * 2
+        return mj
+
+    def gettiji(self):
+        tj = self.__h * self.w * self.l
+        return tj
+
+class zhibox(Box):
+    def __init__(self,l,w,h,ys):
+        super(zhibox,self).__init__(l,w,h)
+        self.ys = ys
+
+    def gettj(self):
+        tj,ys = self._h * self.l * self.w , self.ys
+        return tj ,ys
+
+
+zbox = Box(1,2,3)
+print(zbox.getAera())
+zbox1 = zhibox(1,4,2,'yellow')
+print(zbox1.getAera())
 
 
 
-# #@property  调用装饰器
-#
-# class Box:
-#     def __init__(self,l,w,h):
-#         self.__l = l
-#         self.__w = w
-#         self.__h = h
-#
-#     @property
-#
-#     def MJ(self):
-#         mj1 = self.__l * self.__w
-#         mj2 = self.__w * self.__h
-#         mj3 = self.__l * self.__h
-#         mj = (mj1 + mj2 + mj3) * 2
-#         return mj
-#
-#     @MJ.setter
-#     def MJ(self,tatil):
-#         self.__h, self.__l, self.__w = tatil
-#
-#
-#     @MJ.deleter
-#     def MJ(self):
-#         print('del')
-#
-# zhibox = Box(1,1,1)
-# print(zhibox.MJ)
-#
-# zhibox.MJ = 1,2,3
-# print(zhibox.MJ)
+#@property  调用装饰器
 
+class Box:
+    def __init__(self,l,w,h):
+        self.__l = l
+        self.__w = w
+        self.__h = h
+
+    @property
+
+    def MJ(self):
+        mj1 = self.__l * self.__w
+        mj2 = self.__w * self.__h
+        mj3 = self.__l * self.__h
+        mj = (mj1 + mj2 + mj3) * 2
+        return mj
+
+    @MJ.setter
+    def MJ(self,tatil):
+        self.__h, self.__l, self.__w = tatil
+
+
+    @MJ.deleter
+    def MJ(self):
+        print('del')
+
+zhibox = Box(1,1,1)
+print(zhibox.MJ)
+
+zhibox.MJ = 1,2,3
+print(zhibox.MJ)
+
+
+########
 
 class Webopera:
 
