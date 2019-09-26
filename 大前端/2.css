@@ -1,0 +1,26 @@
+#a1{
+    color: blue; font-size: 15px;
+}
+nav {
+    color: blue; font-size: 25px; font-size: 30px;background: red; width: 800px;
+}
+#h1 {
+    color: blue; background: greenyellow; text-align: center; width: 800px;
+}
+
+
+input[type='text']{
+    color: blue;
+}
+input[type='password']{
+    color: red;
+}
+#a3{
+    color: yellow; text-align: center;
+}
+#a4 {
+    color: blue; text-align: center;
+}
+#a5 {
+    color: greenyellow; text-align: center;
+}
